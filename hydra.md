@@ -4,7 +4,7 @@ Project currently named hydra since it has one primary head (directory blockchai
 
 ### Status
 
-There is still a lot of logic needed to be built out in the factom-core library, so this is going to be just the skeleton of a project for a while.
+There is still a lot of logic needed to be built out in the factom-py library, so this is going to be just the skeleton of a project for a while.
 
 Features:
 - RPC server for all block types and entries

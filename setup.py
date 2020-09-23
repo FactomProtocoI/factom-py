@@ -4,19 +4,19 @@ from setuptools import (
 )
 
 
-deps = {"factom-core": ["factom-keys", "plyvel",], "hydra": ["bottle", "click", "plyvel", "requests",]}
+deps = {"factom-py": ["factom-keys", "plyvel",], "hydra": ["bottle", "click", "plyvel", "requests",]}
 
 setup(
-    name="factom-core",
+    name="factom-py",
     version="0.0.9",
     description="A python library for working with the primitives of the Factom blockchain",
-    author="Sam Barnes",
-    author_email="mistersamuelbarnes@gmail.com",
-    url="https://github.com/sambarnes/factom-core",
+    author="Justin Hanneman (originally Sam Barnes)",
+    author_email="justin@factom.com",
+    url="https://github.com/FactomProject/factom-py",
     keywords=["factom", "core", "blockchain"],
     license="MIT",
-    py_modules=["factom_core"],
-    install_requires=deps["factom-core"],
+    py_modules=["factom_py"],
+    install_requires=deps["factom-py"],
     zip_safe=False,
     packages=find_packages(exclude=["tests", "tests.*", "hydra", "p2p"]),
     classifiers=[
