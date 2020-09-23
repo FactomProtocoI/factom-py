@@ -50,15 +50,15 @@ class FactoidTransaction:
         buf.append(len(self.outputs))
         buf.append(len(self.ec_purchases))
         for i in self.inputs:
-            value = i.get("value")
+            value = i.get("value") or 0
             fct_address = i.get("fct_address")
             buf.extend(varint.encode(value) + fct_address)
         for o in self.outputs:
-            value = o.get("value")
+            value = o.get("value") or 0
             fct_address = o.get("fct_address")
             buf.extend(varint.encode(value) + fct_address)
         for purchase in self.ec_purchases:
-            value = purchase.get("value")
+            value = purchase.get("value") or 0
             ec_public_key = purchase.get("ec_public_key")
             buf.extend(varint.encode(value) + ec_public_key)
         return bytes(buf)
